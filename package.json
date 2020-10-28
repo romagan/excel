@@ -1,0 +1,16 @@
+{
+  "name": "excel",
+  "version": "1.0.0",
+  "description": "Excel JavaScript App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "excel"
+  ],
+  "author": "Roman Konashenkov <rom.konashenkov@yandex.ru>",
+  "license": "ISC"
+}
