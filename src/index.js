@@ -1,3 +1,3 @@
 import '/scss/style.scss';
 
-console.log('index33')
+console.log('index')

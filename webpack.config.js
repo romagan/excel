@@ -28,9 +28,9 @@ module.exports = {
         // contentBase: path.resolve(__dirname, 'src'),
         port: 3000,
         hot: isDev,
-        // disableHostCheck: true,
     },
     devtool: isDev ? 'source-map' : false,
+    target: isDev ? 'web' : 'browserslist',
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
