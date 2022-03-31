@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cross-env NODE_ENV=development webpack serve --open 'Google Chrome'",
+    "dev": "cross-env NODE_ENV=development webpack serve --open 'Chrome'",
     "build": "cross-env NODE_ENV=production webpack --mode production"
   },
   "keywords": [
@@ -33,6 +33,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1"
+    "@babel/polyfill": "^7.12.1",
+    "normalize-scss": "^7.0.1"
   }
 }
