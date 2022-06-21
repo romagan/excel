@@ -21,12 +21,13 @@ module.exports = {
         extensions: ['.js'],
         alias: {
             '@': path.resolve(__dirname, 'src'),
-            '@core': path.resolve(__dirname, 'src/core '),
+            '@core': path.resolve(__dirname, 'src/core/'),
+            '@components': path.resolve(__dirname, 'src/components/'),
         }
     },
     devServer: {
         // contentBase: path.resolve(__dirname, 'src'),
-        port: 3000,
+        port: 3300,
         hot: isDev,
     },
     devtool: isDev ? 'source-map' : false,
@@ -57,11 +58,7 @@ module.exports = {
                 test: /\.s[ac]ss$/i,
                 use: [
                     {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            hmr: isDev,
-                            reloadAll: true
-                        }
+                        loader: MiniCssExtractPlugin.loader
                     },
                     'css-loader',
                     'sass-loader',
