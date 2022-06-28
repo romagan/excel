@@ -17,6 +17,8 @@ export class DomListener {
       if (!this[callbackName]) {
         throw new Error(`Method ${callbackName} isn't implemented in ${this.name} component`)
       }
+
+      this[callbackName] = this[callbackName].bind(this)
       this.$root.on(listener, this[callbackName])
     })
   }
