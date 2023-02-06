@@ -12,13 +12,13 @@ const filename = (ext) => isDev ? `bundle.${ext}` : `bundle.[hash].${ext}`;
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
-    entry: ['@babel/polyfill', path.resolve(__dirname, 'src/index.js')],
+    entry: path.resolve(__dirname, 'src/index.ts'),
     output: {
         filename: filename('js'),
         path: path.resolve(__dirname, 'dist'),
     },
     resolve: {
-        extensions: ['.js'],
+        extensions: ['.js', '.ts'],
         alias: {
             '@': path.resolve(__dirname, 'src'),
             '@core': path.resolve(__dirname, 'src/core/'),
@@ -65,13 +65,10 @@ module.exports = {
                 ],
             },
             {
-                test: /\.m?js$/,
+                test: /\.tsx?$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader",
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
+                    loader: "ts-loader",
                 }
             }
         ]
